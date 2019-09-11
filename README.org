@@ -1,0 +1,24 @@
+* Bagel (Slack)
+  A service for getting people in a slack team to socialize with each other!
+
+  Bagel is a piece of software that will pair up people in a specific channel whenever it is run. It will create a message between two people and encourage them to find time this week to have a conversation over lunch, over a coffee, or whatever. For people who have never talked to each other, this is a way to keep community ties strong! For people who already know each other, this is a good opportunity to catch up :)
+* Motivation
+  This program exists partially as a favour to a friend, but also as an opportunity to hone my Clojure development skills.
+* Build Status
+  TODO
+* Code Style
+  This project follows the following style guide: https://guide.clojure.style/
+* Technologies used:
+** Built with:
+   * [[https://www.clojure.org][Clojure]]
+* Installation
+  TODO
+* Tests
+  TODO
+* How to Run
+  TODO
+* Credits
+  Thanks to [[https://github.com/maxmora][Christopher Spahr]] for motivating this project
+* License
+  This project is licensed under the [[Eclipse Public License, Version 1.0][https://www.eclipse.org/legal/epl-v10.html]]
+
