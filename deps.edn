@@ -1,2 +1,20 @@
 {:deps
- {org.clojure/clojure {:mvn/version "1.10.1"}}}
+ {;; Language Platform
+  org.clojure/clojure {:mvn/version "1.10.1"}
+  ;; Environment variables
+  environ {:mvn/version "1.1.0"}
+  ;; Slack integration
+  org.julienxx/clj-slack {:mvn/version "0.6.3"}}
+ :aliases
+  {:eastwood
+   {:main-opts ["-m" "eastwood.lint" {:source-paths ["src"]}]
+    :extra-deps {jonase/eastwood {:mvn/version "0.3.6"}}}
+   :kibit
+   {:extra-deps {tvaughan/kibit-runner {:mvn/version "0.2.1"}}
+    :main-opts ["-m" "kibit-runner.cmdline"]}
+   :lint
+   {:extra-deps {com.jameslaverack/cljfmt-runner
+                 {:git/url "https://github.com/JamesLaverack/cljfmt-runner"
+                  :sha "d6952345b3047e03ca3a88f89a1433c109b7b442"}}
+    :main-opts ["-m" "cljfmt-runner.check"]}
+   :lint/fix {:main-opts ["-m" "cljfmt-runner.fix"]}}}
