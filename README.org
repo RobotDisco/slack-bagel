@@ -14,7 +14,16 @@
 * Installation
   TODO
 * Tests
-  TODO
+** How to lint:
+   ~clojure -A:lint~
+** How to run static analysis tools:
+   ~clojure -A:kibit~
+   ~clojure -A:eastwood~
+* How to configure
+  Bagel requires the following environment variables to be set up:
+
+  * =SLACK_TOKEN=: The =xoxp=-prefixed token given to you when you installed Bagel into your workspace.
+  * =BAGEL_CHANNEL_NAME=: The Slack channel containing the members you would like to pair off.
 * How to Run
   TODO
 * Credits
