@@ -1,4 +1,4 @@
-(ns org.robot-disco.slack-bagel.core
+(ns net.robot-disco.slack-bagel.core
   (:gen-class)
   (:require [environ.core :refer [env]]
             [clj-slack.channels :as schan]
