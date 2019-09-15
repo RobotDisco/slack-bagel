@@ -1,4 +1,5 @@
 (ns org.robot-disco.slack-bagel.core
+  (:gen-class)
   (:require [environ.core :refer [env]]
             [clj-slack.channels :as schan]
             [clj-slack.mpim :as smpim]
@@ -6,7 +7,7 @@
             [clj-slack.rtm :as srtm]
             [clojure.string :as string]))
 
-(def token (env :slack-token))
+(def token (env :bagel-slack-token))
 (def channel-name (env :bagel-channel-name))
 
 (def connection {:api-url "https://slack.com/api"
@@ -35,3 +36,7 @@
       (let [mpim (smpim/open connection (conj pair my-user-id))
             mpim-id (get-in mpim [:group :id])]
         (schat/post-message connection mpim-id "Hello! This week you have been matched up as conversation partners! I hope you meet up and have a great time :)")))))
+
+(defn -main [& args]
+  (let [pairs (pair-users channel-name)]
+    (message-pairs pairs)))
