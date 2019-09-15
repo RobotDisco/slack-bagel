@@ -19,7 +19,7 @@
 * Installation
   1. [[https://www.clojure.org/guides/getting_started][Install Clojure]]
   2. Check out this repo
-  3. Determine and set the desired configuration
+  3. Determine and set the [[*How to configure][desired configuration]]
 * Tests
 ** How to unit test:
    Because this is 99% integration code, unfortunately TODO
@@ -31,12 +31,14 @@
 * How to configure
   Bagel requires the following environment variables to be set up:
 
-  * =SLACK_TOKEN=: The =xoxp=-prefixed token given to you when you installed Bagel into your workspace.
+  * =BAGEL_SLACK_TOKEN=: The =xoxp=-prefixed token given to you when you installed Bagel into your workspace.
   * =BAGEL_CHANNEL_NAME=: The Slack channel containing the members you would like to pair off.
 * How to Run
-  TODO
+  ~clj -A:run~ (after configuring)
 * Credits
   Thanks to [[https://github.com/maxmora][Christopher Spahr]] for motivating this project
 * License
+  (c) 2019 Gaelan D'costa
+
   This project is licensed under the [[https://www.eclipse.org/legal/epl-v10.html][Eclipse Public License Version 1.0]], as is Clojure itself.
 
