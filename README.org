@@ -19,7 +19,12 @@
 * Installation
   1. [[https://www.clojure.org/guides/getting_started][Install Clojure]]
   2. Check out this repo
-  3. Determine and set the [[*How to configure][desired configuration]]
+  3. Go to https://api.slack.com/apps and press the "Create a New App Button"
+  4. Go to Features -> Bot Users, and create a new user. Name it what you want.
+  5. Go to Features -> OAuth and Permissions. Add =channels:read, mpim:write, bot= permission scopes.
+  6. Choose the "Install App to Workspace" button on the top of the Oauth and Permissions page.
+  7. Create a Slack channel in your team. This will be where the members of interested people will be grabbed from.
+  8. Determine and set the [[*How to configure][desired configuration]]
 * Tests
 ** How to unit test:
    Because this is 99% integration code, unfortunately TODO
@@ -31,10 +36,12 @@
 * How to configure
   Bagel requires the following environment variables to be set up:
 
-  * =BAGEL_SLACK_TOKEN=: The =xoxp=-prefixed token given to you when you installed Bagel into your workspace.
+  * =BAGEL_SLACK_TOKEN=: The =xoxp=-prefixed OAuth Access Token given to you when you installed Bagel into your workspace.
   * =BAGEL_CHANNEL_NAME=: The Slack channel containing the members you would like to pair off.
 * How to Run
   ~clj -A:run~ (after configuring)
+
+  You can use a cronfile or something to run this file on a periodic basis.
 * Credits
   Thanks to [[https://github.com/maxmora][Christopher Spahr]] for motivating this project
 * License
