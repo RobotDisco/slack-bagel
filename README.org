@@ -7,16 +7,25 @@
 * Build Status
   TODO
 * Code Style
-  This project follows the following style guide: https://guide.clojure.style/
+  This project strives to follow the following style guide: https://guide.clojure.style/
+
+  This project uses the following linting tools:
+  * [[https://github.com/jonase/kibit][Kibit]]
+  * [[https://github.com/jonase/eastwood][Eastwood]]
+  * [[https://github.com/technomancy/slamhound][Slamhound]] (eventually)
 * Technologies used:
 ** Built with:
    * [[https://www.clojure.org][Clojure]]
 * Installation
-  TODO
+  1. [[https://www.clojure.org/guides/getting_started][Install Clojure]]
+  2. Check out this repo
+  3. Determine and set the desired configuration
 * Tests
+** How to unit test:
+   Because this is 99% integration code, unfortunately TODO
 ** How to lint:
    ~clojure -A:lint~
-** How to run static analysis tools:
+** How to run static analysis / idiomatic code conformance tools:
    ~clojure -A:kibit~
    ~clojure -A:eastwood~
 * How to configure
@@ -29,5 +38,5 @@
 * Credits
   Thanks to [[https://github.com/maxmora][Christopher Spahr]] for motivating this project
 * License
-  This project is licensed under the [[Eclipse Public License, Version 1.0][https://www.eclipse.org/legal/epl-v10.html]]
+  This project is licensed under the [[https://www.eclipse.org/legal/epl-v10.html][Eclipse Public License Version 1.0]], as is Clojure itself.
 
